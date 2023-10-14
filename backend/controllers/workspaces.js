@@ -25,7 +25,7 @@ const getWorkSpace = async (req, res) => {
         const { id } = req.params
         const { rows } = await pool.query(
             `SELECT workspaces.workspace_id, workspaces.workspace_name, workspaces.workspace_description, workspaces.workspace_price, workspaces.workspace_image, 
-            json_agg(json_build_object('item_id', items.item_id, 'item_name', items.item_name, 'item_description', items.item_description, 'item_price', items.item_price)) AS items, 
+            json_agg(json_build_object('item_id', items.item_id, 'item_name', items.item_name, 'item_description', items.item_description, 'item_price', items.item_price, 'item_image', items.item_image)) AS items,
             SUM(items.item_price) AS total_price, 
             COUNT(items.item_id) AS total_items 
             FROM workspaces 
@@ -70,6 +70,13 @@ const updateWorkspace = async (req, res) => {
     try {
         const { id } = req.params
         const { workspace_name, workspace_description, workspace_price, workspace_image, items } = req.body
+
+        // Delete existing items associated with the workspace
+        await pool.query(
+            `DELETE FROM workspace_items 
+  WHERE workspace_id = $1`, [id]
+        )
+
         const { rows: workspaceRows } = await pool.query(
             `UPDATE workspaces 
             SET workspace_name = $1, workspace_description = $2, workspace_price = $3, workspace_image = $4 
@@ -106,4 +113,3 @@ const deleteWorkspace = async (req, res) => {
 
 
 export default { getAllWorkspaces, getWorkSpace, createWorkspace, updateWorkspace, deleteWorkspace }
-

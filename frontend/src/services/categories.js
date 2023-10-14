@@ -6,4 +6,6 @@ const getAllCategories = () => request('GET', categoriesUrl);
 
 const getCategory = (id) => request('GET', `${categoriesUrl}/${id}`);
 
-export default { getAllCategories, getCategory };
+const getAllCategoriesAndItems = () => request('GET', `${categoriesUrl}/items/cat_items`);
+
+export default { getAllCategories, getCategory, getAllCategoriesAndItems };

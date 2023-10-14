@@ -8,7 +8,7 @@ const getWorkSpace = (id) => request('GET', `${workspacesUrl}/${id}`);
 
 const createWorkSpace = (workSpace) => request('POST', workspacesUrl, workSpace);
 
-const updateWorkSpace = (workSpace) => request('PUT', `${workspacesUrl}/${workSpace.id}`, workSpace);
+const updateWorkSpace = (workSpace) => request('PUT', `${workspacesUrl}/${workSpace.workspace_id}`, workSpace);
 
 const deleteWorkSpace = (id) => request('DELETE', `${workspacesUrl}/${id}`);
 
