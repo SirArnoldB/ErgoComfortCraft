@@ -37,11 +37,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/SirArnoldB/ErgoComfortCraft/blob/main/ErgoComfortCraftWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-
-GIF created with ... GIF tool here
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
@@ -50,7 +48,7 @@ GIF created with ... GIF tool here
 
 ## License
 
-Copyright [2023] [name of copyright owner]
+Copyright [2023] [Arnold Bhebhe]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
