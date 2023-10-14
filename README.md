@@ -43,11 +43,6 @@ Here's a walkthrough of implemented required features:
 
 GIF created with ... GIF tool here
 
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
-
 ## Notes
 
 - This idea has great potential, and impacts a lot of people. I would like to continue working on it, and make it a fully functional app.
