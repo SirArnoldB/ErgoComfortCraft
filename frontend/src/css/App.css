@@ -1,6 +1,30 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.App {
+  display: flex;
+}
+
+.workspaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 2rem;
+}
+
+.workspace-card {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
